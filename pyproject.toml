@@ -1,0 +1,32 @@
+[project]
+name = "http-action-runner"
+requires-python = ">=3.11"
+version = "0.0.0"
+license = "MIT"
+authors = [
+  { name = "wrobit", email = "wrobit.io@gmail.com" }
+]
+maintainers = [
+  { name = "wrobit", email = "wrobit.io@gmail.com" }
+]
+
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["*"]
+exclude = []
+namespaces = false
+
+[tool.ruff]
+line-length = 80
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.4",
+]
