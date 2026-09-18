@@ -1,0 +1,24 @@
+Todos:
+  Tasks backlog
+  Decorators and Closures:
+    Backlog:
+    New:
+      ☐ Create `@retry` decorator
+      ☐ Create simple CLI HTTP action runner using `requests`
+        ☐ Authentication method
+        ☐ GET
+        ☐ POST
+        ☐ PUT/PATCH
+        ☐ DELETE
+      ☐ Display requests statistics
+      ☐ Create `@log_request` decorator
+      ☐ Create decorator acceptings arguments `@require_status(200)`
+      ☐ Replace some global state with a class and compare both approaches
+      ☐ Re-create simplified decorator API similar to `@app.get("/users")` to understand how framework decorators work
+    Done:
+      ✔ Add global request counter @done(26-09-18 19:50)
+      ✔ Create a simple count template method for testing purposes @done(26-09-18 19:50)
+    Cancelled:
+    Backlog:
+      ☐ Extend the project with new functionalities after the first version is done
+    
