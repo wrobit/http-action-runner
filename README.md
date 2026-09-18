@@ -8,6 +8,10 @@ This project is fully written by hand without usage of any ai code generating to
 AI was only used as a mentor for learning purposes to cover some of the topics.
 
 ---
+
+Procedural thinking. Focused structure. Zero noise.
+
+```
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -39,5 +43,6 @@ AI was only used as a mentor for learning purposes to cover some of the topics.
 ⠀⠐⣿⡆⢚⣱⠸⣿⠀⢻⣽⣄⣀⣠⠤⠼⠶⠶⠶⠶⢶⡀⣼⠋⠁⠀⠀⠀⠹⣿⣀⣀⣿⣿⣼⡒⠐⣒⢛⣆⠀⠀⠀⠀
 ⠀⠀⠉⣽⣦⣿⡇⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠛⢿⣃⣷⡀⠀⠀⠀⠀⠘⢷⣤⢾⣿⣿⡄⢀⠀⠀⠘⢦⡀⠀⠀
 ⠠⣴⣿⣿⣿⣿⣷⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣷⣶⣿⣿⣿⣷⡀⠀⠀⠀⣀⡾⠉⢻⣧⣿⡧⠤⠤⠤⠤⠬⡷⣦⡀
+```
 
 _Built by wrobit · one phase at a time._
