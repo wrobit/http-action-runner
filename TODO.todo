@@ -3,6 +3,7 @@ Todos:
   Decorators and Closures:
     Backlog:
     New:
+      ☐ Create tests for count and retry decorators using `pytest`
       ☐ Create simple CLI HTTP action runner using `requests`
         ☐ Authentication method
         ☐ GET
