@@ -7,6 +7,25 @@ This is a project for testing and learning purposes.
 This project is fully written by hand without usage of any ai code generating tools.
 AI was only used as a mentor for learning purposes to cover some of the topics.
 
+## Notes
+
+### How to initialize project
+```
+uv venv
+uv pip install -r pyproject.toml
+```
+
+### How to add package
+```
+uv add package_name
+```
+
+### How to use venv
+```
+source .venv/bin/activate
+deactivate
+```
+
 ---
 
 Procedural thinking. Focused structure. Zero noise.

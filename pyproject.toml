@@ -10,7 +10,9 @@ maintainers = [
   { name = "wrobit", email = "wrobit.io@gmail.com" }
 ]
 
-dependencies = []
+dependencies = [
+    "requests>=2.34.2",
+]
 
 [tool.setuptools.packages.find]
 where = ["."]
