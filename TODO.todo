@@ -3,7 +3,6 @@ Todos:
   Decorators and Closures:
     Backlog:
     New:
-      ☐ Create `@retry` decorator
       ☐ Create simple CLI HTTP action runner using `requests`
         ☐ Authentication method
         ☐ GET
@@ -18,6 +17,7 @@ Todos:
     Done:
       ✔ Add global request counter @done(26-09-18 19:50)
       ✔ Create a simple count template method for testing purposes @done(26-09-18 19:50)
+      ✔ Create `@retry` decorator @started(26-09-18 20:23) @done(26-09-18 20:30) @lasted(7m19s)
     Cancelled:
     Backlog:
       ☐ Extend the project with new functionalities after the first version is done

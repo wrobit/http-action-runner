@@ -1,18 +1,32 @@
 from functools import wraps
 
+import requests
+
+max_retries = 5
 request_count = 0
 
 
 def main():
-    for i in range(27):
+    for i in range(10):
         method_to_be_counted(i)
 
     print(f"Number of requests called: {request_count}")
 
 
-# TODO: Add retry decorator for retrying number, raise proper exceptions using
-# try catch methods and raise exception
-# if the request is not failing then return the main function
+def retry(times):
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            for attempt in range(times):
+                try:
+                    return func(*args, **kwargs)
+                except requests.RequestException:
+                    print(f"Attempt {attempt + 1} failed")
+            raise RuntimeError("All request attempts failed")
+
+        return wrapper
+
+    return decorator
 
 
 def count_requests(func):
@@ -26,6 +40,7 @@ def count_requests(func):
     return wrapper
 
 
+@retry(max_retries)
 @count_requests
 def method_to_be_counted(i):
     yield
