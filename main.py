@@ -13,7 +13,7 @@ def main():
     print(f"Number of requests called: {request_count}")
 
 
-attempts_failed_error = "All request attempts failed"
+ATTEMPTS_FAILED_ERROR = "All request attempts failed"
 
 
 def retry(times):
@@ -25,7 +25,7 @@ def retry(times):
                     return func(*args, **kwargs)
                 except requests.RequestException:
                     print(f"Attempt {attempt + 1} failed")
-            raise RuntimeError(attempts_failed_error)
+            raise RuntimeError(ATTEMPTS_FAILED_ERROR)
 
         return wrapper
 

@@ -1,7 +1,10 @@
+import pytest
 import requests
-from pytest import raises
 
 import main
+
+
+MAX_RETRIES = 3
 
 
 def test_count_requests_returns_original_value():
@@ -28,12 +31,8 @@ def test_count_requests_increments_count_for_each_call():
     assert main.request_count == should_be_called_times
 
 
-max_retries = 3
-
-
 def test_retry_returns_original_value():
-    @main.retry(max_retries)
-    @main.count_requests
+    @main.retry(MAX_RETRIES)
     def test_fn():
         return "bar"
 
@@ -41,32 +40,35 @@ def test_retry_returns_original_value():
 
 
 def test_retry_raises_runtime_error_after_all_attempts_fail():
-    local_retries = 0
+    failed_attempts = 0
 
-    @main.retry(max_retries)
+    @main.retry(MAX_RETRIES)
     def test_fn():
-        nonlocal local_retries
-        local_retries += 1
+        nonlocal failed_attempts
+        failed_attempts += 1
         raise requests.RequestException
 
-    with raises(RuntimeError, match=main.attempts_failed_error):
+    with pytest.raises(RuntimeError, match=main.ATTEMPTS_FAILED_ERROR):
         test_fn()
 
-    assert local_retries == max_retries
+    assert failed_attempts == MAX_RETRIES
 
 
 def test_retry_returns_value_after_some_failures():
-    local_retries = 0
-    success_after_retries = 2
+    failed_attempts = 0
+    total_calls = 0
+    failures_before_success = 2
 
-    @main.retry(max_retries)
+    @main.retry(MAX_RETRIES)
     def test_fn():
-        nonlocal local_retries
-        if local_retries == success_after_retries:
+        nonlocal total_calls
+        nonlocal failed_attempts
+        total_calls += 1
+        if failed_attempts == failures_before_success:
             return "foo"
-        else:
-            local_retries += 1
-            raise requests.RequestException
+        failed_attempts += 1
+        raise requests.RequestException
 
     assert test_fn() == "foo"
-    assert local_retries == success_after_retries
+    assert total_calls == MAX_RETRIES
+    assert failed_attempts == failures_before_success
