@@ -26,15 +26,13 @@ source .venv/bin/activate
 deactivate
 ```
 
----
-
 ### How to test
 ```
-# Compact
-uv run pytest -q 
-# Verbose
 uv run pytest -v
+uv run pytest -q 
 ```
+
+---
 
 Procedural thinking. Focused structure. Zero noise.
 
