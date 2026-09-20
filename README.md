@@ -28,6 +28,14 @@ deactivate
 
 ---
 
+### How to test
+```
+# Compact
+uv run pytest -q 
+# Verbose
+uv run pytest -v
+```
+
 Procedural thinking. Focused structure. Zero noise.
 
 ```
