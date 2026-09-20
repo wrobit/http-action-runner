@@ -3,7 +3,6 @@ Todos:
   Decorators and Closures:
     Backlog:
     New:
-      ☐ Create tests for retry decorator using `pytest`
       ☐ Create simple CLI HTTP action runner using `requests`
         ☐ Authentication method
         ☐ GET
@@ -20,6 +19,7 @@ Todos:
       ✔ Create a simple count template method for testing purposes @done(26-09-18 19:50)
       ✔ Create `@retry` decorator @started(26-09-18 20:23) @done(26-09-18 20:30) @lasted(7m19s)
       ✔ Create tests for count decorator using `pytest` @done(26-09-19 02:32)
+      ✔ Create tests for retry decorator using `pytest` @started(26-09-20 19:09) @done(26-09-20 19:33) @lasted(24m12s)
     Cancelled:
     Backlog:
       ☐ Extend the project with new functionalities after the first version is done

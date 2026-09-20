@@ -13,6 +13,9 @@ def main():
     print(f"Number of requests called: {request_count}")
 
 
+attempts_failed_error = "All request attempts failed"
+
+
 def retry(times):
     def decorator(func):
         @wraps(func)
@@ -22,7 +25,7 @@ def retry(times):
                     return func(*args, **kwargs)
                 except requests.RequestException:
                     print(f"Attempt {attempt + 1} failed")
-            raise RuntimeError("All request attempts failed")
+            raise RuntimeError(attempts_failed_error)
 
         return wrapper
 
