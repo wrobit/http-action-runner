@@ -3,10 +3,10 @@ Todos:
   Decorators and Closures:
     Backlog:
     New:
-      ☐ Initialize dummyjson api configuration
+      ✔ Initialize dummyjson api configuration @done(26-09-28 18:08)
       ☐ Create simple CLI HTTP action runner using `requests`
         ☐ Authentication method
-        ☐ GET
+        ✔ GET @done(26-09-28 18:08)
         ☐ POST
         ☐ PUT/PATCH
         ☐ DELETE
